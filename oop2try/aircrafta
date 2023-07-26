@@ -1,0 +1,337 @@
+
+class Aircraft():
+    def __init__(self,model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type):
+        self.model=model
+        self.country=country
+        self.first_flight=first_flight
+        self.maxspeed=maxspeed
+        self.service_ceiling=service_ceiling
+        self.engine=engine
+        self.radar=radar
+        self.weapon=weapon
+        self.type=type
+
+
+class F15(Aircraft):
+    def __init__(self,model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type):
+        super().__init__(model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type)
+    def informations(self):
+        print(f"model{self.model}""McDonnel dougles F15-A")
+        print(f"country{self.country}""USA")
+        print(f"type{self.type}"" fourth generation Air dominant Fighter")
+        print(f"first_flight{self.first_flight}""1972")
+        print(f"maxspeed{self.maxspeed}""2.5 Mach")
+        print(f"engine{self.engine}"" Pratt & Whitney F100-PW-100 ")
+        print(f"radar{self.radar}""AN-APG-82")
+        print(f"service_ceiling{self.service_ceiling}""65000 fit")
+        print(f"weapon{self.weapon}"" AIM-7 Sparrow\r\n"+ "AIM-9 Sidewinder\r\n"+ " AIM-120 AMRAAM\r\n"+ "AIM-260 JATM (To be integrated)\r\n"+ "Air-to-surface missiles:\r\n"+ " AGM-65 Maverick\r\n")
+        print("-----------------------------------------------------------------------------------------------------------------------------------------")
+class Rafale(Aircraft):
+    def __init__(self,model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type,avionics):
+        super().__init__(model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type)
+        self.avionics=avionics
+    def informations(self):
+        print(f"model{self.model}"" rafale")
+        print(f"country{self.country}""France")
+        print(f"type{self.type}"" Tactical Combat  fourth++  delta wings aircraft")
+        print(f"first_flight{self.first_flight}""1986")
+        print(f"maxspeed{self.maxspeed}""2.3Mach")
+        print(f"engine{self.engine}"" Pratt & Whitney F100-PW-229 turbofan")
+        print(f"radar{self.radar}""Thales RBE2-AA AESA radar")
+        print(f"service_ceiling{self.service_ceiling}""51,952 ftfit")
+        print(f"Missiles{self.weapon}""Air-to-air:MBDA MICA EM and IR,MBDA Meteor,Magic II ; Air-to-surface:MBDA Apache, MBDA Storm Shadow/SCALP-EG,AASM-Hammer (SBU-38/54/64),GBU-12 Paveway II, GBU-16 Paveway II, GBU-22 Paveway III, GBU-24 Paveway III, GBU-49 Enhanced Paveway II,AS-30L,Mark 82[380],MBDA AM 39-Exocet air-launched anti-ship missile (one AM 39-Exocet at the central under-fuselage hardpoint)[381][382]")
+        print(f"avionics{self.avionics}""Thales SPECTRA Electronic Warfare system,Thales/SAGEM-OSF Optronique Secteur Frontal infra-red search and track (IRST) system")
+        print("------------------------------------------------------------------------------------------------") 
+      
+     
+class F16(Aircraft):
+    def __init__(self,model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type,special_abilitiy,avionics):
+        super().__init__(model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type)
+        self.special_ability= special_abilitiy
+        self.avionics=avionics
+    def informations(self):
+        print(f"model{self.model}"" F16 ")
+        print(f"country{self.country}""USA")
+        print(f"type{self.type}"" supersonic multirole fighter aircraft ")
+        print(f"first_flight{self.first_flight}""1974")
+        print(f"maxspeed{self.maxspeed}""2.3Mach")
+        print(f"engine{self.engine}"" Pratt & Whitney F100-PW-229 turbofan")
+        print(f"radar{self.radar}""AN/APG-68 radar")
+        print(f"service_ceiling{self.service_ceiling}""50000fit")
+        print(f"weapons{self.weapon}""   AIM-9 Sidewinder, AIM-120 AMRAAM,IRIS-T,Python-4,Python-5")
+        print(f"special_ability{self.special_ability}"" first supprted by computer Relaxed stability and fly-by-wire")
+        print(f"avionics{self.avionics}""")
+        print("------------------------------------------------------------------------------------------------")
+
+class F35(Aircraft):
+    def __init__(self,model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type,avionics,stealth_ability):
+       super().__init__(model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type)
+       self.stealth_ability=stealth_ability
+       self.avionics=avionics
+    def informations(self):
+        print(f"model:{self.model}"" F35 lighting 2")
+        print(f"country:{self.country}""USA")
+        print(f"type:{self.type}""multirole  fifth generation fighter")
+        print(f"first_flight:{self.first_flight}""2006")
+        print(f"maxspeed:{self.maxspeed}""1.6 Mach")
+        print(f"engine:{self.engine}""Pratt & Whitney F135-PW-100 afterburning turbofan")
+        print(f"radar:{self.radar}""AN/APG-81 AESA radar")
+        print(f"avionics{self.avionics}""")
+        print(f"service_ceiling:{self.service_ceiling}""50000fit")
+        print(f"stealth ability{self.stealth_ability}""")
+        print(f"weapons:{self.weapon}""Air-to-air missiles: AIM- Sidewinder AIM-120 AMRAAM AIM-260 JATM (To be integrated) MBDA Meteor (Block 4, for F-35B, not before 2027)[473][173][474]"
+"Air-to-surface missiles:"
+"AGM-88G AARGM-ER (Block 4)"
+"AGM-158 JASSM[166]"
+"GM-179 JAGM"
+"SPEAR 3 (Block 4, in development, integration contracted)[160][474]"
+"Anti-ship missiles:"
+"AGM-158C LRASM[475] (being integrated)"
+"Joint Strike Missile (integration in progress)[476]")
+print("---------------------------------------------------------------------------------")
+class Mig29(Aircraft):
+    def __init__(self,model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type,special_abilitiy):
+       super().__init__(model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type)
+       self.special_ability=special_abilitiy
+    def informations(self):
+      
+        print(f"model:{self.model}"" Mikoyan Mig29-M")
+        print(f"country:{self.country}""russia")
+        print(f"type:{self.type}""fourth generation interceptor aircraft")
+        print(f"first_flight:{self.first_flight}""1977")
+        print(f"maxspeed:{self.maxspeed}""2.3Mach")
+        print(f"engine:{self.engine}""Klimov RD-33 afterburning turbofan engines")
+        print(f"radar:{self.radar}""N019")
+        print(f"service_ceiling:{self.service_ceiling}""59000fit")
+        print(f"weapons:{self.weapon}"" R-27, R-73 ve R-60 AA missles.   Kh-25ML/25MP, Kh-29T, Kh-31G/31A ve Kh-35U AP missles")
+        print(f"special_ability:{self.special_ability}""It is the world's first aircraft with a helmet-mounted sighting system")
+        print("-----------------------------------------------------------------------------------------------------------------------------")
+       
+class YF23(Aircraft):
+    def __init__(self,model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type,stealth_ability):
+       super().__init__(model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type)
+       self.stealth_ability=stealth_ability
+    def informations(self):
+
+        print(f"model:{self.model}"" northob grumman YF23 Black widow")
+        print(f"country:{self.country}""USA")
+        print(f"type:{self.type}""FIFTH generation stealth  fighter")
+        print(f"first_flight:{self.first_flight}""1990")
+        print(f"maxspeed:{self.maxspeed}""2.2 mach")
+        print(f"engine:{self.engine}""Pratt & Whitney YF119 or General Electric YF120 afterburning turbofan engines, 35,000 lbf (160 kN) with afterburner")
+        print(f"radar:{self.radar}""AN/APG-81 AESA radar")
+        print(f"service_ceiling:{self.service_ceiling}""600000 fit")
+        print(f"stealth ability{self.stealth_ability}""")
+        print(f"weapons{self.weapon}""Air-to-air missiles:  20 mm (0.79 in) M61 Vulcan cannon AIM-120 AMRAAM or AIM-7 Sparrow medium-range air-to-air missiles AIM-9 Sidewinder short-range air-to-air missiles")
+        print("----------------------------------------------------------------------------------------------------------")
+class F22(Aircraft):
+    def __init__(self,model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type,stealth_ability,avionics):
+        super().__init__(model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type)
+        self.stealth_ability=stealth_ability
+        self.avionics=avionics
+    def informations(self):
+        print(f"model:{self.model}""F22")
+        print(f"avionics:{self.model}""")
+        print(f"country:{self.country}""USA")
+        print(f"type:{self.type}""FIFTH generation stealth fighter")
+        print(f"first_flight:{self.first_flight}""1997")
+        print(f"maxspeed:{self.maxspeed}"" 2.2 Mach")
+        print(f"engine:{self.engine}"" Pratt & Whitney F119-PW-100 augmented turbofans, 26,000 lbf (116 kN) thrust each dry, 35,000 lbf (156 kN) with afterburner ")
+        print(f"radar:{self.radar}""AN/APG-77(V)1 AESA radar: 125,150 miles (201,241 km) against 1 m2 (11 sq ft) targets (estimated range), more than 250 miles (400 km) in narrow beams")
+        print(f"service_ceiling:{self.service_ceiling}""65000 fit")
+        print(f"weapons{self.weapon}""Air-to-air missiles: AIM-120C/D AMRAAM or AIM-120A/B AMRAAM,AIM-9M/X Sidewinder")
+        print(f"stealth ability:{self.stealth_ability}""")
+        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+class SU35(Aircraft):
+    def __init__(self,model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type):
+        super().__init__(model,country,first_flight,maxspeed,engine,radar,weapon,service_ceiling,type)
+    def informations(self):
+        print(f"model:{self.model}""SU-35")
+        print(f"country:{self.country}""USA")
+        print(f"type:{self.type}""airdominant fourth generation fighter")
+        print(f"first_flight:{self.first_flight}""1999")
+        print(f"maxspeed:{self.maxspeed}""2.25 Mach")
+        print(f"engine:{self.engine}"" Saturn AL-41F1S afterburning turbofan engines, 86.3 kN (19,400 lbf) thrust each dry, 137.3 kN (30,900 lbf) with afterburner, 142.2 kN (32,000 lbf) in emergency power")
+        print(f"radar:{self.radar}""Irbis-E passive electronically scanned array radar")
+        print(f"service_ceiling:{self.service_ceiling}""59000 fit")
+        print(f"weapons{self.weapon}""air_to_air missiles :R-27ER/ET/EA, R-73E/M,R-77M/P/T/-1,R-74,R-37")
+        print("-------------------------------------------------------------------------------------------------------------")
+class eurofightertyphoon(Aircraft):
+    def __init__(self, model, country, first_flight, maxspeed, engine, radar, weapon, service_ceiling, type,avionics):
+        super().__init__(model, country, first_flight, maxspeed, engine, radar, weapon, service_ceiling, type)
+        self.avionics=avionics
+    def informations(self):
+        print(f"model:{self.model}"" eurofighter typoon")
+        print(f"country:{self.country}""United kingdom")
+        print(f"type:{self.type}"" airdominant against soviet air fighters defence ourlands for aurope")
+        print(f"maxspeed:{self.maxspeed}""2.0 Mach")
+        print(f"engine:{self.engine }""Eurojet EJ200 afterburning turbofan engines, 60 kN (13,000 lbf) thrust each [326] dry, 90 kN (20,000 lbf) with afterburner")
+        print(f"first_flight{self.first_flight}""1994")
+        print(f"weapons:{self.weapon}""   Air-to-air missiles: AIM-120 AMRAAM, MBDA Meteor,IRIS-T,AIM-9 Sidewinder")
+        print(f"serviceceiling{self.service_ceiling}""")
+        print(f"radar{self.radar}""CAPTOR E: Active electronically scanned array (AESA) radar ")
+        print(f"avionics{self.avionics}""Passive Infra-Red Airborne Tracking Equipment,Praetorian DASS,Damocles (targeting pod),LITENING III laser targeting pod (LITENING 5 in RAF testing),Sniper Advanced Targeting Pod")
+        print("----------------------------------------------------------------------------------")
+class j20(Aircraft):
+    def __init__(self,model ,engine,country,service_ceiling,weapon,radar,maxspeed,avionics,first_flight,stealth_ability,type):
+        super() . __init__(model,engine,maxspeed,radar,service_ceiling,weapon,country,first_flight,type)
+        self.avionics=avionics
+        self.stealth_ability=stealth_ability
+    def informations(self):
+        print(f"model:{self.model}""J20-A")
+        print(f"country:{self.country}""CHINA")
+        print(f"maxspeed:{self.maxspeed}""2.1 MAch")
+        print(f"first_flight:{self.first_flight}""2011")
+        print(f"weapon:{self.weapon}""PL-10 Short Range AAM,PL-12 Medium Range AAM,PL-15 Long Range AAM,PL-21 Very Long Range AAM (future implementation),adiation missile,LS-6/50 kg and LS-6/100 kg Small-diameter precision-guided bomb")
+        print(f"engine:{self.engine}""Shenyang WS-10C afterburning turbofan, 147 kN (33,000 lbf) with afterburne")
+        print(f"avionics:{self.avionics}""EOTS-86 electro-optical targeting system,EORD-31 infrared search and track")
+        print(f"radar:{self.radar}""Type 1475 (KLJ-5) AESA Radar")
+        print(f"type:{self.type}""stealth superiority  fifth generation fighter")
+        print(f"service_ceiling:{self.service_ceiling}""66000 fit")
+        print(f"stealth abiltiy:{self.stealth_ability}""The chined forebody, modified radar radome, and electroconductive canopy[13] use a stealth shaping, yielding signature performance in a mature design similar to the F-22.[109] The diverterless supersonic inlets (DSI) leading into serpentine inlets (S-ducts) can obscure the reflective surface of the engine from radar detection. ")
+      
+       
+
+
+
+aircraft=[F16("","","","","","","","","","",""),F35("","","","","","","","","","",""),Rafale("","","","","","","","","",""),Mig29("","","","","","","","","",""),YF23("","","","","","","","","",""),F22("","","","","","","","","","",""),SU35("","","","","","","","",""),j20("","","","","","","","","","",""),eurofightertyphoon("","","","","","","","","",""),F15("","","","","","","","","")]
+
+aircraft_hash = {
+    'F16' : F16("","","","","","","","","","",""),
+    'F35' : F35("","","","","","","","","","",""),
+    'Mig29':Mig29("","","","","","","","","",""),
+    'YF23':YF23("","","","","","","","","",""),
+    'F22': F22("","","","","","","","","","",""),
+    'Rafale':Rafale("","","","","","","","","",""),
+    'SU35':SU35("","","","","","","","",""),
+    'J20' :j20("","","","","","","","","","",""),
+    'eurofighter':  eurofightertyphoon("","","","","","","","","",""),
+    'F15':F15("","","","","","","","","")
+
+
+}
+
+
+
+for aircraft in aircraft:
+    aircraft.informations()
+class Areas(SU35,YF23,Mig29,F22,F35,F16,Rafale,eurofightertyphoon):
+    def __init__(self,area):
+        self.area=area
+    def beach_area(self):
+        print(f"area:{self.area}""mission area beach area")
+        print("In the coastal zone, aircraft that can take off and land from the sea or receive support from ships can be advantageous. Therefore, aircraft such as the F-35B or F-35C, the naval version of the F-35, the F/A-18E/F Super Hornet, Su-33 or MiG-29K could perform well in this region.")
+    def alp_mountains(self):
+        print(f"area:{self.area}""mission area alp muntains")
+        print("this area maneuverability very important ")
+    def desert_area(self):
+        print(f"area:{self.area}""mission area desert area")   
+        print("in the desert region aircraft with long-range weapons and high-speed flight capabilities can be advantageous. Therefore, the F-15 and F-22 can perform well in this region.") 
+    def sea_area(self):
+        print(f"area:{self.area}""mission area sea")
+    def forest_area(self):
+        print(f"area:{self.area}""mission area forest area ")
+    def city_area(self):
+        print(f"area:{self.area}""mission area city area")
+    def polar_area(self):
+        print(f"area:{self.area}""mission area polar area")
+        print("In the polar region, characteristics such as cold weather resistance, long-range flight and radar jamming can be important. Therefore, multirole fighters such as the Rafale, Su-30 or F-16 could perform well in this region.")
+areas=[Areas("mountain area"),Areas("desert area"),Areas("beach area"),Areas("forest area"),Areas("sea area"),Areas("city area"),Areas("polar area")]
+for areas in areas:
+   areas.alp_mountains()  
+   areas.desert_area()
+   areas.sea_area()
+   areas.forest_area()
+   areas.city_area()
+   areas.polar_area()
+   areas.beach_area()
+   break
+areas_hash={
+   'mountain area' :Areas("mountain area"),
+    'desert area'  :Areas("desert area"),
+    'sea '         :Areas("sea  area"),
+    'beach area'   :Areas("beach area"),
+    'polar area'   :Areas("polar area"),
+    'city area'    :Areas("city area"),
+    'forest area'  :Areas("foresrt area"),
+    'alp mountains':Areas("alp mountains")
+
+
+
+}
+area = input("which are you want a choose (mountain area ,desert area ,beach area , forest area  ,  sea area ,city area ,polar area ) ")
+if area== "mountain area":
+     ucak="F22" 
+     areas_hash["mountain area "].alp_mountains()
+elif area == "desert area":
+     areas_hash["desert area"].desert_area()
+     ucak="F15"
+elif area=="sea area":   
+     areas_hash["sea area"].sea_area()
+     ucak = "rafale"
+     
+elif area=="forest area":
+     areas_hash["forest area"].forest_area()
+     
+     ucak = "SU-35"
+elif area=="city area":
+     areas_hash["city area"].city_area()
+     ucak = "SU35"
+elif area=="polar area":
+     areas_hash["polar area"].polar_area()
+     ucak="mig29"
+elif area=="beach area":
+     areas_hash["beach area"].beach_area()
+     ucak="f22"
+
+else:
+    ucak = " area is not founded "
+print(f"you are choose : {area} you should use  {ucak}. ")
+
+planes = ["F35", "F22", 'test']
+
+fighter=input("which you want choose (F35,F22,F15,F16,MIG29,SU35,rafale,eurofightertyphoon,YF23,J20)")
+
+for plane in planes:
+    if plane == fighter:
+        print("it exists!")
+
+if fighter=="F35":
+    aircraft_hash["F35"].informations()
+    plane="F35"
+elif fighter=="F22":
+    aircraft_hash['f22'].informations
+    plane="F22"
+elif fighter=="SU35":
+    aircraft_hash['SU35'].informations()
+    plane="SU35"
+elif fighter=="Mig29":
+    aircraft_hash['Mig29'].informations()
+    plane="MIG29"
+elif fighter=="rafale":
+    aircraft_hash['Rafale'].informations()
+    plane="rafale"
+elif fighter=="eurofightertyphoon":
+    aircraft_hash['eurofighter'].informations()
+    plane="eurofightertyphoon"
+
+elif fighter=="YF23":
+    plane="YF23"
+    aircraft_hash["YF23"].informations()
+elif fighter=="F15":
+    plane="F15"
+    aircraft_hash['F15'].informations
+elif fighter=="F16":
+    aircraft_hash['F16'].informations()
+    plane="F16"
+elif fighter=="SU35":
+    aircraft_hash['SU35'].informations()
+    plane="SU35"
+elif fighter=="J20":
+    aircraft_hash['J20'].informations()
+    plane="j20"
+else :
+    plane="there is no options this name"
+
+    
+print(f"you are choose {plane}  preparing for flight  this area : {area}")
